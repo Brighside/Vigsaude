@@ -1,0 +1,35 @@
+.loginConteiner {
+    width: 500px;
+    height: 620px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: #0000002a solid 1px;
+    box-shadow: 10px 10px 10px #0000001a;
+    margin: 3vh auto;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.viglogoConteiner {
+    display: grid;
+    justify-items: center;
+}
+
+.viglogoConteiner img {
+    width: 225px;
+}
+
+.viglogoConteiner p {
+    color: #00000066;
+    font-size: 8pt;
+}
+
+.logosConteiner a {
+    margin: 0 10px;
+}
+
+.logosConteiner img {
+    width: 65px;
+    height: 65px;
+}

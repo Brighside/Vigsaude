@@ -1,7 +1,10 @@
+import { PainelLogin } from "@/components/login/painelLogin"
+import "./globals.css"
+
 export default function Home() {
   return (
     <div> 
-      <h1> Em construção</h1>
+      <PainelLogin />
     </div>
   )
 }
