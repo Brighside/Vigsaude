@@ -12,10 +12,13 @@ export const PainelLogin = () => {
                 <Input type="text" placeholder="Nome de Usuário"/>
                 <Input type="password" placeholder="Senha" />
                 <div className="opcaoSenha">
-                    <input type="checkbox"  id="manterLogado"/>
-                    <label htmlFor="manterLogado">Manter logado</label>
+                    <div>
+                        <input type="checkbox"  id="manterLogado"/>
+                        <label htmlFor="manterLogado">Manter logado</label>
+                    </div>
                     <a href="http://">Esqueci minha senha</a>
                 </div>
+                <button>Entrar</button>
             </div>
             <div className="logosConteiner">
                 <a href="http://www.ensp.fiocruz.br/portal-ensp/departamento/csegsf" target="_blank" >
