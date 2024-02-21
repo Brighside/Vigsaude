@@ -79,3 +79,12 @@
     width: 65px;
     height: 65px;
 }
+
+@media screen and (max-width: 600px) {
+    .loginConteiner {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        border: none;
+    }
+}
