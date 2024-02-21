@@ -1,13 +1,22 @@
 input {
     color: #00000066;
-    height: 37.5px;
-    width: 300px;
+    height: 5vh;
+    width: 70vw;
     padding-left: 20px;
     border: #0000002a solid 1px;
-    border-radius: 10px;
+    border-radius: 2vw;
     font-size: 12pt;
 }
 
 input:focus { 
     color: #000000a6;
+}
+
+@media screen and (min-width: 600px){
+    input {
+        height: 37.5px;
+        width: 300px;
+        border-radius: 10px;
+        font-size: 12pt;
+    }
 }

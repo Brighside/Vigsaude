@@ -1,11 +1,9 @@
 .loginConteiner {
-    width: 500px;
-    height: 620px;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    border: none;
     background-color: #fff;
-    border-radius: 10px;
-    border: #0000002a solid 1px;
-    box-shadow: 10px 10px 10px #0000001a;
-    margin: 3vh auto;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -15,16 +13,15 @@
 .viglogoConteiner {
     display: grid;
     justify-items: center;
-    margin-top: 22px;
 }
 
 .viglogoConteiner img {
-    width: 225px;
+    width: 50vw;
 }
 
 .viglogoConteiner p {
     color: #00000066;
-    font-size: 10pt;
+    font-size: 9pt;
 }
 
 /* Estilização da div com os inputs*/
@@ -34,45 +31,46 @@
 }
 
 .inputConteiner input {
-    margin-bottom: 10px;
+    margin-bottom: 2vh;
 }
 
 .inputConteiner button {
-    width: 322px;
-    height: 37.5px;
+    width: 70vw;
+    height: 5vh;
     color: #fff;
     background-color: #87c7ff;
-    border-radius: 10px;
+    border-radius: 2vw;
+    font-size: 12pt;
     font-weight: bold;
-    margin-top: 22px;
+    margin-top: 2vh;
 }
 
 /* Estilização da div com as opções de manter logado e recuperar senha*/
 .opcaoSenha {
     display: flex;
-    width: 322px;
+    width: 70vw;
     justify-content: space-between;
 }
 
 .opcaoSenha input[type="checkbox"]{
     width: 15px;
     height: 15px;
-    margin-left: 10px;
+    margin-left: 2vw;
     margin-right: 5px;
 }
 
 .opcaoSenha label {
-    font-size: 10pt;
+    font-size: 8pt;
     color: #000000a6;
 }
 
 .opcaoSenha a {
-    margin-right: 10px;
+    margin-right: 2vw;
 }
 
 /* Estilização da div com os logos institucionais*/
 .logosConteiner a {
-    margin: 0 10px;
+    margin: 0 2vw;
 }
 
 .logosConteiner img {
@@ -80,11 +78,64 @@
     height: 65px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
     .loginConteiner {
-        width: 100vw;
-        height: 100vh;
-        margin: 0;
-        border: none;
+        width: 500px;
+        height: 620px;
+        border-radius: 10px;
+        border: #0000002a solid 1px;
+        box-shadow: 10px 10px 10px #0000001a;
+        margin: 3vh auto;
+    }
+
+     /* Estilização do logo */
+    .viglogoConteiner {
+        margin-top: 22px;
+    }
+
+    .viglogoConteiner img {
+        width: 225px;
+    }
+
+    .viglogoConteiner p {
+        font-size: 10pt;
+    }
+
+    /* Estilização da div com os inputs*/
+    .inputConteiner input {
+        margin-bottom: 10px;
+    }
+
+    .inputConteiner button {
+        width: 322px;
+        height: 37.5px;
+        border-radius: 10px;
+        margin-top: 22px;
+        font-size: 10pt;
+    }
+
+    /* Estilização da div com as opções de manter logado e recuperar senha*/
+    .opcaoSenha {
+        width: 322px;
+    }
+
+    .opcaoSenha input[type="checkbox"]{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+        margin-right: 5px;
+    }
+
+    .opcaoSenha label {
+        font-size: 10pt;
+    }
+    
+    .opcaoSenha a {
+        margin-right: 10px;
+    }
+
+    /* Estilização da div com os logos institucionais*/
+    .logosConteiner a {
+        margin: 0 10px;
     }
 }
