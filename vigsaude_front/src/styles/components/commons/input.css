@@ -1,5 +1,5 @@
 input {
-    color: #00000066;
+    color: var(--inputTextColor);
     height: 5vh;
     width: 70vw;
     padding-left: 20px;
