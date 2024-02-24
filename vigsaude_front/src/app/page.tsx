@@ -3,13 +3,13 @@ import "./globals.css"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Vigsaude",
+	title: "Vigsaude",
 }
 
 export default function Home() {
-  return (
-    <div> 
-      <PainelLogin />
-    </div>
-  )
+	return (
+		<div> 
+			<PainelLogin />
+		</div>
+	)
 }
