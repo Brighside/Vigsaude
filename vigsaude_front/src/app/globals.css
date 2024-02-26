@@ -1,3 +1,9 @@
+:root {
+    --inputTextColor: #00000066;
+    --buttonBGColor: #87c7ff;
+    --buttonTextColor: #fff;
+}
+
 * {
     padding: 0;
     margin: 0;
