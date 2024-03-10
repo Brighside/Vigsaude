@@ -1,0 +1,20 @@
+.submitButton {
+    width: 70vw;
+    height: 5vh;
+    color: var(--buttonTextColor);
+    background-color: var(--buttonBGColor);
+    border-radius: 2vw;
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 2vh;
+}
+
+@media screen and (min-width: 600px) {
+    .submitButton {
+        width: 322px;
+        height: 37.5px;
+        border-radius: 10px;
+        margin-top: 22px;
+        font-size: 10pt;
+    }
+}

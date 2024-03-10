@@ -1,10 +1,10 @@
 import "../../styles/components/commons/input.css"
-type props = {
-	type:  string,
+interface Props {
+	type:  string
 	placeholder: string
 }
 
-export const Input = (props: props) => {
+export const Input = (props: Props) => {
 	return (
 		<input type={props.type} placeholder={props.placeholder}/>
 	)
