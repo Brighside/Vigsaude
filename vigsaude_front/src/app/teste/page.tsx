@@ -1,15 +1,11 @@
-import SubmitButton from "./SubmitButton"
-import { testeForm } from "./testeForm"
+import { Metadata } from "next"
 
-export default function Teste() {
-	return (
-		<> 
-			<form action={testeForm}>
-				<input type="text" placeholder="usuario" name="usuario"/>
-				<input type="text" placeholder="senha" name="senha"/>
-				<SubmitButton text="Enviar"/>
-			</form>
-			
-		</>
+export const metadata: Metadata = {
+	title: "Vigsaude | teste",
+}
+
+export default function Teste () {
+	return(
+		<></>
 	)
 }

@@ -1,5 +1,7 @@
 import { Input } from "../commons/input"
 import "../../styles/components/login.css"
+import { SubmitButton } from "../commons/SubmitButton"
+import authActions from "@/actions/authActions"
 
 export const PainelLogin = () => {
 	return (
@@ -9,16 +11,20 @@ export const PainelLogin = () => {
 				<p>Aplicativo para a saúde pública</p>
 			</div>
 			<div className="inputConteiner">
-				<Input type="text" placeholder="Nome de Usuário"/>
-				<Input type="password" placeholder="Senha" />
-				<div className="opcaoSenha">
-					<div>
-						<input type="checkbox"  id="manterLogado"/>
-						<label htmlFor="manterLogado">Manter logado</label>
+				<form action={ authActions.login }>
+					<Input type="text" name="user" placeholder="Nome de Usuário"/>
+					<Input type="password" name="password" placeholder="Senha" />
+					<div className="opcaoSenha">
+						<div>
+							<label htmlFor="manterLogado">
+								<input type="checkbox"  name="keepLogged"/>
+								Manter logado
+							</label>
+						</div>
+						<a href="http://">Esqueci minha senha</a>
 					</div>
-					<a href="http://">Esqueci minha senha</a>
-				</div>
-				<button>Entrar</button>
+					<SubmitButton text="Entrar" loadingText="autenticando" />
+				</form>
 			</div>
 			<div className="logosConteiner">
 				<a href="http://www.ensp.fiocruz.br/portal-ensp/departamento/csegsf" target="_blank" rel="noreferrer" >

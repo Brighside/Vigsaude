@@ -25,24 +25,13 @@
 }
 
 /* Estilização da div com os inputs*/
-.inputConteiner {
+.inputConteiner form{
     display: grid;
     justify-items: center;
 }
 
 .inputConteiner input {
     margin-bottom: 2vh;
-}
-
-.inputConteiner button {
-    width: 70vw;
-    height: 5vh;
-    color: var(--buttonTextColor);
-    background-color: var(--buttonBGColor);
-    border-radius: 2vw;
-    font-size: 12pt;
-    font-weight: bold;
-    margin-top: 2vh;
 }
 
 /* Estilização da div com as opções de manter logado e recuperar senha*/
@@ -86,7 +75,7 @@
         border-radius: 10px;
         border: #0000002a solid 1px;
         box-shadow: 10px 10px 10px #0000001a;
-        margin: 3vh auto;
+        margin: auto;
     }
 
      /* Estilização do logo */
@@ -105,14 +94,6 @@
     /* Estilização da div com os inputs*/
     .inputConteiner input {
         margin-bottom: 10px;
-    }
-
-    .inputConteiner button {
-        width: 322px;
-        height: 37.5px;
-        border-radius: 10px;
-        margin-top: 22px;
-        font-size: 10pt;
     }
 
     /* Estilização da div com as opções de manter logado e recuperar senha*/
