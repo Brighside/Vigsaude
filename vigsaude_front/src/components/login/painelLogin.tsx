@@ -1,6 +1,7 @@
 import { Input } from "../commons/input"
 import "../../styles/components/login.css"
 import { SubmitButton } from "../commons/SubmitButton"
+import { login } from "@/actions/login"
 
 export const PainelLogin = () => {
 	return (
@@ -10,19 +11,19 @@ export const PainelLogin = () => {
 				<p>Aplicativo para a saúde pública</p>
 			</div>
 			<div className="inputConteiner">
-				<form >
-					<Input type="text" placeholder="Nome de Usuário"/>
-					<Input type="password" placeholder="Senha" />
+				<form action={login}>
+					<Input type="text" name="user" placeholder="Nome de Usuário"/>
+					<Input type="password" name="password" placeholder="Senha" />
 					<div className="opcaoSenha">
 						<div>
 							<label htmlFor="manterLogado">
-								<input type="checkbox"  id="manterLogado"/>
+								<input type="checkbox"  name="keepLogged"/>
 								Manter logado
 							</label>
 						</div>
 						<a href="http://">Esqueci minha senha</a>
 					</div>
-					<SubmitButton text="Entrar" />
+					<SubmitButton text="Entrar" loadingText="autenticando" />
 				</form>
 			</div>
 			<div className="logosConteiner">

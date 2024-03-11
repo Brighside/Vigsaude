@@ -1,4 +1,3 @@
-import { PainelLogin } from "@/components/login/painelLogin"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -7,8 +6,6 @@ export const metadata: Metadata = {
 
 export default function Home() {
 	return (
-		<div> 
-			<PainelLogin />
-		</div>
+		<h1>HOME</h1>
 	)
 }

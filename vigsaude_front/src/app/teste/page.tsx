@@ -1,3 +1,4 @@
+import { login } from "@/actions/login"
 import { SubmitButton } from "@/components/commons/SubmitButton"
 import { Metadata } from "next"
 
@@ -6,17 +7,6 @@ export const metadata: Metadata = {
 }
 
 export default function Teste () {
-	const test = async () => {
-		"use server"
-
-		const req = await fetch("https://vigsaude-back.vercel.app", 
-			{
-				method: "Post"
-			})
-		// const data = await req.json()
-
-		console.log(req)
-	}
 
 	const formStyle = {
 		display: "grid",
@@ -25,10 +15,10 @@ export default function Teste () {
 	}
 
 	return(
-		<form action={test} style={formStyle}>
-			<input type="text" name="Usuário"/>
-			<input type="password" name="Senha"/>
-			<SubmitButton text="Entrar" />
+		<form action={login} style={formStyle}>
+			<input type="text" name="user"/>
+			<input type="password" name="password"/>
+			<SubmitButton text="Entrar" loadingText="Entrando"/>
 		</form>
 	)
 }
