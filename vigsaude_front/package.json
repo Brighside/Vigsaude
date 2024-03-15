@@ -10,7 +10,7 @@
     "server": "json-server -p 8036 db.json"
   },
   "dependencies": {
-    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "jose": "^5.2.3",
     "next": "14.1.0",
     "react": "^18",
@@ -18,7 +18,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@types/bcrypt": "^5.0.2",
+    "@types/bcryptjs": "^2.4.6",
     "@types/jsonwebtoken": "^9.0.6",
     "@types/node": "^20",
     "@types/react": "^18",

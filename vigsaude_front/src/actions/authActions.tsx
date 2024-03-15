@@ -1,4 +1,4 @@
-import bcrypt from "bcrypt"
+import bcrypt from "bcryptjs"
 import { redirect } from "next/navigation"
 import { z } from "zod"
 // import authService from "@/services/auth-service"
