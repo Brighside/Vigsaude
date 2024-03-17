@@ -1,19 +1,8 @@
 import authService from "@/services/auth-service"
 import bcrypt from "bcryptjs"
 import { redirect } from "next/navigation"
-import { z } from "zod"
-// import authService from "@/services/auth-service"
-
-const createAcountSchema = z.object({
-	username: z.string().min(1, {message: "Campo de usuário vazio!"}),
-	email: z.string().email({ message: "Endereço de Email inválido!" }),
-	password: z.string().min(8, {message: "A Senha precisa ter 8 caracteres no minimo!"}),
-})
-
-const loginSchema = z.object({
-	username: z.string().min(1, {message: "Campo de usuário vazio!"}),
-	password: z.string().min(8, {message: "A Senha precisa ter 8 caracteres no minimo!"})
-})
+import { loginSchema } from "@/schema/loginSchema"
+import { createAcountSchema } from "@/schema/createAcountSchema"
 
 async function createAcount(formdata: FormData) {
 	"use server"
@@ -46,7 +35,6 @@ async function createAcount(formdata: FormData) {
 				redirect("/login")
 			}
 		})
-
 }
 
 
