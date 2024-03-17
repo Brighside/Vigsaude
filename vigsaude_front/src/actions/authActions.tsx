@@ -1,8 +1,8 @@
 import authService from "@/services/auth-service"
 import bcrypt from "bcryptjs"
 import { redirect } from "next/navigation"
-import { loginSchema } from "@/schema/loginSchema"
-import { createAcountSchema } from "@/schema/createAcountSchema"
+import { loginSchema } from "@/schemas/loginSchema"
+import { createAcountSchema } from "@/schemas/createAcountSchema"
 
 async function createAcount(formdata: FormData) {
 	"use server"
