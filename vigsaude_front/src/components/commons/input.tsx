@@ -3,11 +3,12 @@ interface Props {
 	type:  string
 	placeholder: string
 	name:  string
+	status: undefined | string
 }
 
-export const Input = ({type, placeholder, name}: Props) => {
+export const Input = ({type, placeholder, name, status}: Props) => {
 	return (
-		<input name={name} type={type} placeholder={placeholder}/>
+		<input className={status} name={name} type={type} placeholder={placeholder}/>
 	)
 }
 

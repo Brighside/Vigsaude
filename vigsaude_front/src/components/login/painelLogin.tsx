@@ -1,9 +1,17 @@
+"use client"
 import { Input } from "../commons/input"
 import "../../styles/components/login.css"
 import { SubmitButton } from "../commons/SubmitButton"
-import authActions from "@/actions/authActions"
+import loginAction from "@/actions/loginAction"
+import { useFormState } from "react-dom"
 
 export const PainelLogin = () => {
+	const [formState, formAction] = useFormState(loginAction, {
+		message: "",
+		status: "",
+		error: []
+	})
+
 	return (
 		<div className="loginConteiner">
 			<div className="viglogoConteiner">
@@ -11,9 +19,10 @@ export const PainelLogin = () => {
 				<p>Aplicativo para a saúde pública</p>
 			</div>
 			<div className="inputConteiner">
-				<form action={ authActions.login }>
-					<Input type="text" name="user" placeholder="Nome de Usuário"/>
-					<Input type="password" name="password" placeholder="Senha" />
+				<form action={ formAction }>
+					<div>{ formState?.message }</div>
+					<Input status={formState?.status} type="text" name="user" placeholder="Nome de Usuário"/>
+					<Input status={formState?.status} type="password" name="password" placeholder="Senha" />
 					<div className="opcaoSenha">
 						<div>
 							<label htmlFor="manterLogado">

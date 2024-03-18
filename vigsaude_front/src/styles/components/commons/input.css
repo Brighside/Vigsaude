@@ -12,6 +12,20 @@ input:focus {
     color: #000000a6;
 }
 
+input.error {
+    border-color: #f0a9a9ea;
+    animation: error 0.2s ease-in-out 0s 4 alternate;
+}
+
+@keyframes error {
+    from {
+        transform: translateX(-5px);
+    }
+    to {
+        transform: translateX(5px);
+    }
+}
+
 @media screen and (min-width: 600px){
     input {
         height: 37.5px;
