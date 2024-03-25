@@ -1,7 +1,18 @@
+"use client"
 import { Input } from "../commons/input"
 import "../../styles/components/login.css"
+import { SubmitButton } from "../commons/SubmitButton"
+import loginAction from "@/actions/loginAction"
+import { useFormState } from "react-dom"
 
 export const PainelLogin = () => {
+	const [formState, formAction] = useFormState(loginAction, {
+		message: "",
+		status: "",
+		formErrors: [],
+		fieldErrors: {}
+	})
+
 	return (
 		<div className="loginConteiner">
 			<div className="viglogoConteiner">
@@ -9,16 +20,28 @@ export const PainelLogin = () => {
 				<p>Aplicativo para a saúde pública</p>
 			</div>
 			<div className="inputConteiner">
-				<Input type="text" placeholder="Nome de Usuário"/>
-				<Input type="password" placeholder="Senha" />
-				<div className="opcaoSenha">
-					<div>
-						<input type="checkbox"  id="manterLogado"/>
-						<label htmlFor="manterLogado">Manter logado</label>
+				<form action={ formAction }>
+					<Input status={formState?.status} type="text" 
+						name="user" 
+						placeholder="Nome de Usuário" 
+						messageError={ formState?.fieldErrors?.username }
+					/>
+					<Input status={ formState?.status } type="password" 
+						name="password" 
+						placeholder="Senha" 
+						messageError={ formState?.fieldErrors?.password }
+					/>
+					<div className="opcaoSenha">
+						<div>
+							<label htmlFor="manterLogado">
+								<input type="checkbox"  name="keepLogged"/>
+								Manter logado
+							</label>
+						</div>
+						<a href="http://">Esqueci minha senha</a>
 					</div>
-					<a href="http://">Esqueci minha senha</a>
-				</div>
-				<button>Entrar</button>
+					<SubmitButton text="Entrar" loadingText="autenticando" />
+				</form>
 			</div>
 			<div className="logosConteiner">
 				<a href="http://www.ensp.fiocruz.br/portal-ensp/departamento/csegsf" target="_blank" rel="noreferrer" >

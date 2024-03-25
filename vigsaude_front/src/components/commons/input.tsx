@@ -1,12 +1,20 @@
 import "../../styles/components/commons/input.css"
-type props = {
-	type:  string,
+
+interface Props {
+	type:  string
 	placeholder: string
+	name:  string
+	status?: string
+	messageError?: string | string[]
 }
 
-export const Input = (props: props) => {
+export const Input = ({type, placeholder, name, status, messageError}: Props) => {
 	return (
-		<input type={props.type} placeholder={props.placeholder}/>
+		<>
+			<input className={status} name={name} type={type} placeholder={placeholder}/>
+			<div className="messageError">{messageError}</div>
+		</>
+		
 	)
 }
 
