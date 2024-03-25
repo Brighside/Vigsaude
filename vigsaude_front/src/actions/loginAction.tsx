@@ -30,7 +30,6 @@ async function loginAction(prevState: formState, formdata: FormData){
 	const passwordHash = await bcrypt.hash(validateForm.data.password, 10)
 	const userInfo = {
 		username: validateForm.data.username,
-		email: "aaaaaa@a.c",
 		password: passwordHash,
 		keepLogged: formdata.get("keepLogged")
 	}
