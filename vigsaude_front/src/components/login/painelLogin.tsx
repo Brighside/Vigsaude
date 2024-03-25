@@ -9,7 +9,8 @@ export const PainelLogin = () => {
 	const [formState, formAction] = useFormState(loginAction, {
 		message: "",
 		status: "",
-		error: []
+		formErrors: [],
+		fieldErrors: {}
 	})
 
 	return (
@@ -20,9 +21,16 @@ export const PainelLogin = () => {
 			</div>
 			<div className="inputConteiner">
 				<form action={ formAction }>
-					<div>{ formState?.message }</div>
-					<Input status={formState?.status} type="text" name="user" placeholder="Nome de Usuário"/>
-					<Input status={formState?.status} type="password" name="password" placeholder="Senha" />
+					<Input status={formState?.status} type="text" 
+						name="user" 
+						placeholder="Nome de Usuário" 
+						messageError={ formState?.fieldErrors?.username }
+					/>
+					<Input status={ formState?.status } type="password" 
+						name="password" 
+						placeholder="Senha" 
+						messageError={ formState?.fieldErrors?.password }
+					/>
 					<div className="opcaoSenha">
 						<div>
 							<label htmlFor="manterLogado">

@@ -30,8 +30,9 @@
     justify-items: center;
 }
 
-.inputConteiner input {
-    margin-bottom: 2vh;
+.inputConteiner Input {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
 /* Estilização da div com as opções de manter logado e recuperar senha*/

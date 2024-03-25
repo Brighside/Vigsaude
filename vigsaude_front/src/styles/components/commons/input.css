@@ -8,22 +8,21 @@ input {
     font-size: 12pt;
 }
 
+div.messageError {
+    color: #e62525ea;
+}
+
 input:focus { 
     color: #000000a6;
 }
 
-input.error {
-    border-color: #f0a9a9ea;
-    animation: error 0.2s ease-in-out 0s 4 alternate;
+input.sucess {
+    border-color: rgba(21, 235, 21, 0.5);
 }
 
-@keyframes error {
-    from {
-        transform: translateX(-5px);
-    }
-    to {
-        transform: translateX(5px);
-    }
+input.error {
+    border-color: #f0a9a9ea;
+    animation: error 0.2s ease-in-out 0s 2;
 }
 
 @media screen and (min-width: 600px){
@@ -32,5 +31,14 @@ input.error {
         width: 300px;
         border-radius: 10px;
         font-size: 12pt;
+    }
+}
+
+@keyframes error {
+    from {
+        transform: translateX(-3px);
+    }
+    to {
+        transform: translateX(3px);
     }
 }
